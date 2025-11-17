@@ -1,96 +1,79 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8" />
-    <title>Informacja o produkcie</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <title>Informacja o produkcie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: #000 url("https://ibb.co/Csb5P3YX") center center / cover no-repeat fixed;
-        }
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-        .overlay {
-            background: rgba(255, 255, 255, 0.92);
-            padding: 24px 32px;
-            border-radius: 14px;
-            max-width: 420px;
-            width: 90%;
-            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
-        }
+      /* ФОН — СЮДА ВСТАВЛЯЕШЬ ПРЯМОЙ ЛИНК НА КАРТИНКУ */
+      background: url("https://ibb.co/Csb5P3YX") no-repeat center center fixed;
+      background-size: cover;
+    }
 
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #111;
-        }
+    .card {
+      background: #ffffff;
+      padding: 24px 32px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      text-align: center;
+      max-width: 380px;
+      width: 100%;
+    }
 
-        p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #444;
-            margin-bottom: 22px;
-        }
+    .card h1 {
+      font-size: 20px;
+      margin: 0 0 12px;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 999px;
-            border: none;
-            background: #007aff;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background 0.2s ease, transform 0.1s ease;
-        }
+    .card p {
+      font-size: 14px;
+      margin: 0 0 20px;
+      color: #555;
+    }
 
-        .btn:hover {
-            background: #0062cc;
-            transform: translateY(-1px);
-        }
+    .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 999px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+    }
 
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        @media (max-width: 480px) {
-            .overlay {
-                padding: 20px 18px;
-            }
-
-            h1 {
-                font-size: 20px;
-            }
-
-            p {
-                font-size: 13px;
-            }
-        }
-    </style>
+    .btn:hover {
+      background: #0063d1;
+    }
+  </style>
 </head>
 <body>
-    <div class="overlay">
-        <h1>Informacja o produkcie</h1>
-        <p>Aby przejść na oficjalną stronę produktu, kliknij przycisk poniżej.</p>
-        <button
-            class="btn"
-            onclick="window.location.href='https://fastnuttrk.com/?a=290106&c=404688&co=353465&mt=26&s1={adid}&s2={creative}&s3={placement}'"
-        >
-            PRZEJDŹ DALEJ
-        </button>
-    </div>
+
+  <div class="card">
+    <h1>Informacja o produkcie</h1>
+    <p>Aby przejść na oficjalną stronę produktu, kliknij przycisk poniżej.</p>
+    <button class="btn" onclick="goToOffer()">PRZEJDŹ DALEJ</button>
+  </div>
+
+  <script>
+    function goToOffer() {
+      window.location.href = "https://fastnuttrk.com/?a=290106&c=404688&co=353465&mt=26&s1={adid}&s2={creative}&s3={placement}";
+    }
+  </script>
+
 </body>
 </html>
