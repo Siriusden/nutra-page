@@ -2,8 +2,8 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Informacja o produkcie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         * {
             box-sizing: border-box;
@@ -12,102 +12,85 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: #f3f4f6;
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #111827;
-        }
-
-        .card {
-            background: #ffffff;
-            padding: 32px 24px 28px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            max-width: 420px;
-            width: 100%;
             text-align: center;
+            background: #000 url("https://ibb.co/Csb5P3YX") center center / cover no-repeat fixed;
         }
 
-        .avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 18px auto;
-            display: block;
+        .overlay {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 24px 32px;
+            border-radius: 14px;
+            max-width: 420px;
+            width: 90%;
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
         }
 
         h1 {
-            font-size: 20px;
-            margin-bottom: 8px;
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #111;
         }
 
         p {
             font-size: 14px;
             line-height: 1.5;
-            color: #4b5563;
+            color: #444;
             margin-bottom: 22px;
         }
 
-        .button {
+        .btn {
             display: inline-block;
             padding: 12px 28px;
-            font-size: 14px;
-            font-weight: 600;
             border-radius: 999px;
             border: none;
+            background: #007aff;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
-            background: #2563eb;
-            color: #ffffff;
             text-decoration: none;
-            transition: background 0.15s ease, transform 0.1s ease;
+            transition: background 0.2s ease, transform 0.1s ease;
         }
 
-        .button:hover {
-            background: #1d4ed8;
+        .btn:hover {
+            background: #0062cc;
             transform: translateY(-1px);
         }
 
-        .button:active {
+        .btn:active {
             transform: translateY(0);
         }
 
-        .note {
-            font-size: 11px;
-            color: #9ca3af;
-            margin-top: 10px;
+        @media (max-width: 480px) {
+            .overlay {
+                padding: 20px 18px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
 <body>
-<div class="card">
-    <!-- ЗДЕСЬ МЕНЯЕШЬ КАРТИНКУ ПРИ НУЖДЕ -->
-    <img class="avatar" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Uśmiechnięta kobieta" />
-
-    <h1>Informacja o produkcie</h1>
-    <p>
-        Aby przejść na oficjalną stronę produktu i zapoznać się ze szczegółami,
-        kliknij przycisk poniżej.
-    </p>
-
-    <!-- КНОПКА ВЕДЁТ НА ТВОЙ ОФФЕР -->
-    <button class="button" id="go">
-        PRZEJDŹ DALEJ
-    </button>
-
-    <div class="note">
-        Strona informacyjna, przejście dalej jest dobrowolne.
+    <div class="overlay">
+        <h1>Informacja o produkcie</h1>
+        <p>Aby przejść na oficjalną stronę produktu, kliknij przycisk poniżej.</p>
+        <button
+            class="btn"
+            onclick="window.location.href='https://fastnuttrk.com/?a=290106&c=404688&co=353465&mt=26&s1={adid}&s2={creative}&s3={placement}'"
+        >
+            PRZEJDŹ DALEJ
+        </button>
     </div>
-</div>
-
-<script>
-    document.getElementById('go').addEventListener('click', function () {
-        window.location.href =
-            "https://fastnuttrk.com/?a=290106&c=404688&co=353465&mt=26&s1={adid}&s2={creative}&s3={placement}";
-    });
-</script>
 </body>
 </html>
